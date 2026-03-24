@@ -1,23 +1,50 @@
 ###############################################################################
-# SmartSwitch — minimal repo contents
-# Goal: ONLY commit these files:
-#   - SmartSwitch.kicad_pro
-#   - SmartSwitch.kicad_sch
-#   - SmartSwitch.kicad_pcb
-#   - .gitignore
+# KiCad project ignore (clean + practical)
 ###############################################################################
 
-# Ignore everything by default
-*
+# --- System / editor junk ---
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
 
-# Keep this ignore file
-!.gitignore
-
-# Keep the KiCad project sources (root-level)
-!SmartSwitch.kicad_pro
-!SmartSwitch.kicad_sch
-!SmartSwitch.kicad_pcb
-
-# Explicitly ignore KiCad local preferences (per-machine UI state)
-SmartSwitch.kicad_prl
+# --- KiCad local settings (machine-specific) ---
 *.kicad_prl
+*.kicad_prl-bak
+
+# --- KiCad autosave / backup ---
+*-backup.*
+*.autosave
+*.kicad_sch-bak
+*.kicad_pcb-bak
+
+# --- Simulation / cache ---
+*.cache
+*.dcm
+*.log
+
+# --- Plot / fabrication outputs (regeneratable) ---
+*.gbr
+*.drl
+*.zip
+*.step
+*.stp
+*.pos
+*.csv
+
+# --- Python / scripts (if added later) ---
+__pycache__/
+*.pyc
+
+
+# --- KiCad runtime junk ---
+*_autosave-*.kicad_sch
+*~.lck
+fp-info-cache
+
+
+###############################################################################
+# IMPORTANT: we DO NOT blanket-ignore everything
+# → allows future expansion (libs, variants, etc.)
+###############################################################################

@@ -1,0 +1,10 @@
+(version 1)
+(rule "GND_to_ISO_RX_clearance"
+    (constraint clearance (min 0.5mm))
+    (condition "(A.Net == 'GND' && B.Net == 'ISO_RX_MID_COMMON')|| (A.Net == 'ISO_RX_MID_COMMON' && B.Net == 'GND')")
+)
+
+(rule "GND_to_ISO_TX_clearance"
+    (constraint clearance (min 0.5mm))
+    (condition "(A.Net == 'GND' && B.Net == 'ISO_TX_MID_COMMON')|| (A.Net == 'ISO_TX_MID_COMMON' && B.Net == 'GND')")
+)

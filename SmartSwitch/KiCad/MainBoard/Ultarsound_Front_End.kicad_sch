@@ -1,0 +1,102 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "da9dd5ad-386b-4f89-a930-cf8ecd51aaea")
+	(paper "A4")
+	(title_block
+		(title "Solid State Smart Switch")
+		(date "${DATE}")
+		(rev "X2")
+		(company "University of Glasgow – James Watt School of Engineering")
+		(comment 2 "Joe Purvis")
+		(comment 3 "Research / Prototype – Not for production")
+		(comment 4 "Docs & code: see QR on PCB")
+		(comment 5 "KiCad 9.0.4")
+	)
+	(lib_symbols)
+	(sheet
+		(at 38.1 40.64)
+		(size 53.34 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "01ff4622-f4e8-4c9d-9fdd-aa90d8d894e3")
+		(property "Sheetname" "RX_Analog_FrontEnd"
+			(at 38.1 39.9284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "RX_Analog_FrontEnd.kicad_sch"
+			(at 38.1 59.0046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SmartSwitch"
+				(path "/53f737d5-86ec-421f-9852-accd22811a1e/5bffcc7a-783d-4eaf-ab0c-b1c1f3b45f90"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 163.83 41.91)
+		(size 77.47 46.99)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "6b861b9e-d521-4d5e-9e51-5739ad445991")
+		(property "Sheetname" "LogDetector_&_DataRecovery"
+			(at 163.83 41.1984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "LogDetector_&_DataRecovery.kicad_sch"
+			(at 163.83 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SmartSwitch"
+				(path "/53f737d5-86ec-421f-9852-accd22811a1e/5bffcc7a-783d-4eaf-ab0c-b1c1f3b45f90"
+					(page "12")
+				)
+			)
+		)
+	)
+)

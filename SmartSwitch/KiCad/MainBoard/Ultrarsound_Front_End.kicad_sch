@@ -1,0 +1,267 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "da9dd5ad-386b-4f89-a930-cf8ecd51aaea")
+	(paper "A4")
+	(title_block
+		(title "Solid State Smart Switch")
+		(date "${DATE}")
+		(rev "X2")
+		(company "University of Glasgow – James Watt School of Engineering")
+		(comment 2 "Joe Purvis")
+		(comment 3 "Research / Prototype – Not for production")
+		(comment 4 "Docs & code: see QR on PCB")
+		(comment 5 "KiCad 9.0.4")
+	)
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 63.5 71.12) (xy 76.2 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30ea2956-c207-4392-92f5-8862c2ee9498")
+	)
+	(wire
+		(pts
+			(xy 127 63.5) (xy 152.4 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d2410cd-ddab-4180-b711-7216ae5b413c")
+	)
+	(wire
+		(pts
+			(xy 127 78.74) (xy 152.4 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "564f0d52-ebc1-4aef-a842-aa5807939676")
+	)
+	(wire
+		(pts
+			(xy 215.9 71.12) (xy 228.6 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d441a3a-8e18-4acd-9f83-f0b15a8af724")
+	)
+	(wire
+		(pts
+			(xy 50.8 101.6) (xy 152.4 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df45b432-81dd-4982-9e52-e50d44b5d7c9")
+	)
+	(hierarchical_label "RX_BIT"
+		(shape output)
+		(at 228.6 71.12 0)
+		(effects
+			(font
+				(face "Verdana")
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2f9245a2-6d77-4fb5-a319-39ec91d38a35")
+	)
+	(hierarchical_label "RX_SIGNAL"
+		(shape input)
+		(at 63.5 71.12 180)
+		(effects
+			(font
+				(face "Verdana")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c0a3864f-6e74-4105-8a04-4f74534b1d93")
+	)
+	(hierarchical_label "BIT_RST"
+		(shape input)
+		(at 50.8 101.6 180)
+		(effects
+			(font
+				(face "Verdana")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e8797918-62a0-4128-b374-e00e7855bb68")
+	)
+	(sheet
+		(at 76.2 50.8)
+		(size 50.8 40.64)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "01ff4622-f4e8-4c9d-9fdd-aa90d8d894e3")
+		(property "Sheetname" "RX_Analog_FrontEnd"
+			(at 76.2 50.0884 0)
+			(effects
+				(font
+					(face "Verdana")
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "RX_Analog_FrontEnd.kicad_sch"
+			(at 76.2 92.0246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "DIFF_OUT_N" output
+			(at 127 78.74 0)
+			(uuid "2578b2ad-2a5f-40fd-a228-3d4ea04d6c3d")
+			(effects
+				(font
+					(face "Verdana")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DIFF_OUT_P" output
+			(at 127 63.5 0)
+			(uuid "9479bc17-c9cd-4d20-8ddc-4f499f033b1a")
+			(effects
+				(font
+					(face "Verdana")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "RX_SIGNAL" input
+			(at 76.2 71.12 180)
+			(uuid "f00feb2b-07e0-4191-9059-898be7ae8622")
+			(effects
+				(font
+					(face "Verdana")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "SmartSwitch"
+				(path "/53f737d5-86ec-421f-9852-accd22811a1e/5bffcc7a-783d-4eaf-ab0c-b1c1f3b45f90"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 152.4 50.8)
+		(size 63.5 63.5)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "6b861b9e-d521-4d5e-9e51-5739ad445991")
+		(property "Sheetname" "LogDetector_&_DataRecovery"
+			(at 152.4 50.0884 0)
+			(effects
+				(font
+					(face "Verdana")
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "LogDetector_&_DataRecovery.kicad_sch"
+			(at 152.4 114.8846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "RX_BIT" output
+			(at 215.9 71.12 0)
+			(uuid "b5f3515f-f404-4122-933e-8129277b8d33")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "BIT_RST" input
+			(at 152.4 101.6 180)
+			(uuid "d7e02440-5281-4fc0-a8c0-2d28211ff20c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DIFF_OUT_N" input
+			(at 152.4 78.74 180)
+			(uuid "7b480933-1a94-4dd0-a617-893a24deedd3")
+			(effects
+				(font
+					(face "Verdana")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DIFF_OUT_P" input
+			(at 152.4 63.5 180)
+			(uuid "4dd9c901-1fb2-4828-8dd0-fc7b8b525677")
+			(effects
+				(font
+					(face "Verdana")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "SmartSwitch"
+				(path "/53f737d5-86ec-421f-9852-accd22811a1e/5bffcc7a-783d-4eaf-ab0c-b1c1f3b45f90"
+					(page "12")
+				)
+			)
+		)
+	)
+)
