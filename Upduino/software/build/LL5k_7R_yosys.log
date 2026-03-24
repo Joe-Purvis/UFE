@@ -1,0 +1,2195 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.60+51 (git sha1 64a933d77-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)
+
+-- Running command `read_verilog -sv LL5k_7R.v; synth_ice40 -top LL5k_WIP -json LL5k_7R.json' --
+
+1. Executing Verilog-2005 frontend: LL5k_7R.v
+Parsing SystemVerilog input from `LL5k_7R.v' to AST representation.
+verilog frontend filename LL5k_7R.v
+Generating RTLIL representation for module `\LL5k_WIP'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH_ICE40 pass.
+
+2.1. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/cells_sim.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/cells_sim.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/cells_sim.v
+Generating RTLIL representation for module `\SB_IO'.
+Generating RTLIL representation for module `\SB_GB_IO'.
+Generating RTLIL representation for module `\SB_GB'.
+Generating RTLIL representation for module `\SB_LUT4'.
+Generating RTLIL representation for module `\SB_CARRY'.
+Generating RTLIL representation for module `\SB_DFF'.
+Generating RTLIL representation for module `\SB_DFFE'.
+Generating RTLIL representation for module `\SB_DFFSR'.
+Generating RTLIL representation for module `\SB_DFFR'.
+Generating RTLIL representation for module `\SB_DFFSS'.
+Generating RTLIL representation for module `\SB_DFFS'.
+Generating RTLIL representation for module `\SB_DFFESR'.
+Generating RTLIL representation for module `\SB_DFFER'.
+Generating RTLIL representation for module `\SB_DFFESS'.
+Generating RTLIL representation for module `\SB_DFFES'.
+Generating RTLIL representation for module `\SB_DFFN'.
+Generating RTLIL representation for module `\SB_DFFNE'.
+Generating RTLIL representation for module `\SB_DFFNSR'.
+Generating RTLIL representation for module `\SB_DFFNR'.
+Generating RTLIL representation for module `\SB_DFFNSS'.
+Generating RTLIL representation for module `\SB_DFFNS'.
+Generating RTLIL representation for module `\SB_DFFNESR'.
+Generating RTLIL representation for module `\SB_DFFNER'.
+Generating RTLIL representation for module `\SB_DFFNESS'.
+Generating RTLIL representation for module `\SB_DFFNES'.
+Generating RTLIL representation for module `\SB_RAM40_4K'.
+Generating RTLIL representation for module `\SB_RAM40_4KNR'.
+Generating RTLIL representation for module `\SB_RAM40_4KNW'.
+Generating RTLIL representation for module `\SB_RAM40_4KNRNW'.
+Generating RTLIL representation for module `\ICESTORM_LC'.
+Generating RTLIL representation for module `\SB_PLL40_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2F_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_2F_PAD'.
+Generating RTLIL representation for module `\SB_WARMBOOT'.
+Generating RTLIL representation for module `\SB_SPRAM256KA'.
+Generating RTLIL representation for module `\SB_HFOSC'.
+Generating RTLIL representation for module `\SB_LFOSC'.
+Generating RTLIL representation for module `\SB_RGBA_DRV'.
+Generating RTLIL representation for module `\SB_LED_DRV_CUR'.
+Generating RTLIL representation for module `\SB_RGB_DRV'.
+Generating RTLIL representation for module `\SB_I2C'.
+Generating RTLIL representation for module `\SB_SPI'.
+Generating RTLIL representation for module `\SB_LEDDA_IP'.
+Generating RTLIL representation for module `\SB_FILTER_50NS'.
+Generating RTLIL representation for module `\SB_IO_I3C'.
+Generating RTLIL representation for module `\SB_IO_OD'.
+Generating RTLIL representation for module `\SB_MAC16'.
+Generating RTLIL representation for module `\ICESTORM_RAM'.
+Successfully finished Verilog frontend.
+
+2.2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2.1. Analyzing design hierarchy..
+Top module:  \LL5k_WIP
+
+2.2.2. Analyzing design hierarchy..
+Top module:  \LL5k_WIP
+Removed 0 unused modules.
+
+2.3. Executing PROC pass (convert processes to netlists).
+
+2.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 33 switch rules as full_case in process $proc$LL5k_7R.v:425$45 in module LL5k_WIP.
+Removed 1 dead cases from process $proc$LL5k_7R.v:238$35 in module LL5k_WIP.
+Marked 6 switch rules as full_case in process $proc$LL5k_7R.v:238$35 in module LL5k_WIP.
+Removed 1 dead cases from process $proc$LL5k_7R.v:116$22 in module LL5k_WIP.
+Marked 7 switch rules as full_case in process $proc$LL5k_7R.v:116$22 in module LL5k_WIP.
+Marked 1 switch rules as full_case in process $proc$LL5k_7R.v:74$18 in module LL5k_WIP.
+Removed a total of 2 dead cases.
+
+2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 3 redundant assignments.
+Promoted 55 assignments to connections.
+
+2.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\LL5k_WIP.$proc$LL5k_7R.v:400$341'.
+  Set init value: \reg_pzt_clamp_start_time = 8'00000001
+  Set init value: \reg_pzt_clamp_stop_time = 8'00000010
+  Set init value: \reg_rx_window_start_time = 8'00000011
+  Set init value: \reg_rx_window_stop_time = 8'00000100
+  Set init value: \reg_test = 8'00000000
+  Set init value: \status_rx_start_clamped = 1'0
+  Set init value: \status_rx_stop_clamped = 1'0
+  Set init value: \f_op = 8'00000000
+  Set init value: \f_addr = 8'00000000
+  Set init value: \f_data = 8'00000000
+  Set init value: \f_chk = 8'00000000
+  Set init value: \f_count = 3'000
+  Set init value: \frame_ready = 1'0
+  Set init value: \resp_status = 8'00000000
+  Set init value: \resp_addr = 8'00000000
+  Set init value: \resp_data = 8'00000000
+  Set init value: \resp_idx = 3'000
+  Set init value: \resp_pending = 1'0
+Found init rule in `\LL5k_WIP.$proc$LL5k_7R.v:90$340'.
+  Set init value: \por_cnt = 0
+  Set init value: \por_n = 1'0
+
+2.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~52 debug messages>
+
+2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\LL5k_WIP.$proc$LL5k_7R.v:400$341'.
+Creating decoders for process `\LL5k_WIP.$proc$LL5k_7R.v:90$340'.
+Creating decoders for process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+     1/233: $6\tx_start_byte$func$LL5k_7R.v:629$15.b[7:0]$331
+     2/233: $6\tx_start_byte$func$LL5k_7R.v:634$17.b[7:0]$336
+     3/233: $6\calc_chk4$func$LL5k_7R.v:634$16.b3[7:0]$335
+     4/233: $6\calc_chk4$func$LL5k_7R.v:634$16.b2[7:0]$334
+     5/233: $6\calc_chk4$func$LL5k_7R.v:634$16.b1[7:0]$333
+     6/233: $6\calc_chk4$func$LL5k_7R.v:634$16.$result[7:0]$332
+     7/233: $5\tx_start_byte$func$LL5k_7R.v:624$14.b[7:0]$323
+     8/233: $5\tx_start_byte$func$LL5k_7R.v:634$17.b[7:0]$329
+     9/233: $5\calc_chk4$func$LL5k_7R.v:634$16.b3[7:0]$328
+    10/233: $5\calc_chk4$func$LL5k_7R.v:634$16.b2[7:0]$327
+    11/233: $5\calc_chk4$func$LL5k_7R.v:634$16.b1[7:0]$326
+    12/233: $5\calc_chk4$func$LL5k_7R.v:634$16.$result[7:0]$325
+    13/233: $5\tx_start_byte$func$LL5k_7R.v:629$15.b[7:0]$324
+    14/233: $4\tx_start_byte$func$LL5k_7R.v:619$13.b[7:0]$314
+    15/233: $4\tx_start_byte$func$LL5k_7R.v:634$17.b[7:0]$321
+    16/233: $4\calc_chk4$func$LL5k_7R.v:634$16.b3[7:0]$320
+    17/233: $4\calc_chk4$func$LL5k_7R.v:634$16.b2[7:0]$319
+    18/233: $4\calc_chk4$func$LL5k_7R.v:634$16.b1[7:0]$318
+    19/233: $4\calc_chk4$func$LL5k_7R.v:634$16.$result[7:0]$317
+    20/233: $4\tx_start_byte$func$LL5k_7R.v:629$15.b[7:0]$316
+    21/233: $4\tx_start_byte$func$LL5k_7R.v:624$14.b[7:0]$315
+    22/233: $3\tx_start_byte$func$LL5k_7R.v:634$17.b[7:0]$312
+    23/233: $3\calc_chk4$func$LL5k_7R.v:634$16.b3[7:0]$311
+    24/233: $3\calc_chk4$func$LL5k_7R.v:634$16.b2[7:0]$310
+    25/233: $3\calc_chk4$func$LL5k_7R.v:634$16.b1[7:0]$309
+    26/233: $3\calc_chk4$func$LL5k_7R.v:634$16.$result[7:0]$308
+    27/233: $3\tx_start_byte$func$LL5k_7R.v:629$15.b[7:0]$307
+    28/233: $3\tx_start_byte$func$LL5k_7R.v:624$14.b[7:0]$306
+    29/233: $3\tx_start_byte$func$LL5k_7R.v:619$13.b[7:0]$305
+    30/233: $2\tx_start_byte$func$LL5k_7R.v:634$17.b[7:0]$303
+    31/233: $2\calc_chk4$func$LL5k_7R.v:634$16.b3[7:0]$302
+    32/233: $2\calc_chk4$func$LL5k_7R.v:634$16.b2[7:0]$301
+    33/233: $2\calc_chk4$func$LL5k_7R.v:634$16.b1[7:0]$300
+    34/233: $2\calc_chk4$func$LL5k_7R.v:634$16.$result[7:0]$299
+    35/233: $2\tx_start_byte$func$LL5k_7R.v:629$15.b[7:0]$298
+    36/233: $2\tx_start_byte$func$LL5k_7R.v:624$14.b[7:0]$297
+    37/233: $2\tx_start_byte$func$LL5k_7R.v:619$13.b[7:0]$296
+    38/233: $6\reg_read$func$LL5k_7R.v:594$11.$result[7:0]$293
+    39/233: $12$unnamed_block$1.new_rx_stop[7:0]$291
+    40/233: $10\sat_plus_1$func$LL5k_7R.v:574$10.$result[7:0]$288
+    41/233: $11$unnamed_block$1.new_rx_stop[7:0]$283
+    42/233: $9$unnamed_block$1.rx_start_plus_1[7:0]$284
+    43/233: $9\sat_plus_1$func$LL5k_7R.v:574$10.$result[7:0]$285
+    44/233: $9\sat_plus_1$func$LL5k_7R.v:574$10.v[7:0]$286
+    45/233: $10$unnamed_block$1.new_rx_stop[7:0]$281
+    46/233: $9\sat_plus_1$func$LL5k_7R.v:564$9.$result[7:0]$278
+    47/233: $10$unnamed_block$1.new_rx_start[7:0]$276
+    48/233: $9\sat_plus_1$func$LL5k_7R.v:552$8.$result[7:0]$273
+    49/233: $9$unnamed_block$1.new_rx_stop[7:0]$263
+    50/233: $8$unnamed_block$1.rx_start_plus_1[7:0]$265
+    51/233: $8\sat_plus_1$func$LL5k_7R.v:564$9.$result[7:0]$268
+    52/233: $8\sat_plus_1$func$LL5k_7R.v:564$9.v[7:0]$269
+    53/233: $9$unnamed_block$1.new_rx_start[7:0]$262
+    54/233: $8$unnamed_block$1.pzt_stop_plus_1[7:0]$264
+    55/233: $8\sat_plus_1$func$LL5k_7R.v:552$8.$result[7:0]$266
+    56/233: $8\sat_plus_1$func$LL5k_7R.v:552$8.v[7:0]$267
+    57/233: $8\sat_plus_1$func$LL5k_7R.v:574$10.v[7:0]$271
+    58/233: $8\sat_plus_1$func$LL5k_7R.v:574$10.$result[7:0]$270
+    59/233: $8$unnamed_block$1.new_rx_stop[7:0]$260
+    60/233: $8\sat_plus_1$func$LL5k_7R.v:542$7.$result[7:0]$257
+    61/233: $8$unnamed_block$1.new_rx_start[7:0]$255
+    62/233: $8\sat_plus_1$func$LL5k_7R.v:534$6.$result[7:0]$252
+    63/233: $7$unnamed_block$1.new_rx_stop[7:0]$238
+    64/233: $7$unnamed_block$1.rx_start_plus_1[7:0]$240
+    65/233: $7\sat_plus_1$func$LL5k_7R.v:542$7.$result[7:0]$243
+    66/233: $7\sat_plus_1$func$LL5k_7R.v:542$7.v[7:0]$244
+    67/233: $7$unnamed_block$1.new_rx_start[7:0]$237
+    68/233: $7$unnamed_block$1.pzt_stop_plus_1[7:0]$239
+    69/233: $7\sat_plus_1$func$LL5k_7R.v:534$6.$result[7:0]$241
+    70/233: $7\sat_plus_1$func$LL5k_7R.v:534$6.v[7:0]$242
+    71/233: $7\sat_plus_1$func$LL5k_7R.v:574$10.v[7:0]$250
+    72/233: $7\sat_plus_1$func$LL5k_7R.v:574$10.$result[7:0]$249
+    73/233: $7\sat_plus_1$func$LL5k_7R.v:564$9.v[7:0]$248
+    74/233: $7\sat_plus_1$func$LL5k_7R.v:564$9.$result[7:0]$247
+    75/233: $7\sat_plus_1$func$LL5k_7R.v:552$8.v[7:0]$246
+    76/233: $7\sat_plus_1$func$LL5k_7R.v:552$8.$result[7:0]$245
+    77/233: $6\sat_plus_1$func$LL5k_7R.v:574$10.v[7:0]$235
+    78/233: $6\sat_plus_1$func$LL5k_7R.v:574$10.$result[7:0]$234
+    79/233: $6\sat_plus_1$func$LL5k_7R.v:564$9.v[7:0]$233
+    80/233: $6\sat_plus_1$func$LL5k_7R.v:564$9.$result[7:0]$232
+    81/233: $6\sat_plus_1$func$LL5k_7R.v:552$8.v[7:0]$231
+    82/233: $6\sat_plus_1$func$LL5k_7R.v:552$8.$result[7:0]$230
+    83/233: $6\sat_plus_1$func$LL5k_7R.v:542$7.v[7:0]$229
+    84/233: $6\sat_plus_1$func$LL5k_7R.v:542$7.$result[7:0]$228
+    85/233: $6\sat_plus_1$func$LL5k_7R.v:534$6.v[7:0]$227
+    86/233: $6\sat_plus_1$func$LL5k_7R.v:534$6.$result[7:0]$226
+    87/233: $6$unnamed_block$1.rx_start_plus_1[7:0]$225
+    88/233: $6$unnamed_block$1.pzt_stop_plus_1[7:0]$224
+    89/233: $6$unnamed_block$1.new_rx_stop[7:0]$223
+    90/233: $6$unnamed_block$1.new_rx_start[7:0]$222
+    91/233: $5\reg_read$func$LL5k_7R.v:594$11.$result[7:0]$219
+    92/233: $5\reg_read$func$LL5k_7R.v:594$11.a[7:0]$220
+    93/233: $5\sat_plus_1$func$LL5k_7R.v:574$10.v[7:0]$218
+    94/233: $5\sat_plus_1$func$LL5k_7R.v:574$10.$result[7:0]$217
+    95/233: $5\sat_plus_1$func$LL5k_7R.v:564$9.v[7:0]$216
+    96/233: $5\sat_plus_1$func$LL5k_7R.v:564$9.$result[7:0]$215
+    97/233: $5\sat_plus_1$func$LL5k_7R.v:552$8.v[7:0]$214
+    98/233: $5\sat_plus_1$func$LL5k_7R.v:552$8.$result[7:0]$213
+    99/233: $5\sat_plus_1$func$LL5k_7R.v:542$7.v[7:0]$212
+   100/233: $5\sat_plus_1$func$LL5k_7R.v:542$7.$result[7:0]$211
+   101/233: $5\sat_plus_1$func$LL5k_7R.v:534$6.v[7:0]$210
+   102/233: $5\sat_plus_1$func$LL5k_7R.v:534$6.$result[7:0]$209
+   103/233: $5$unnamed_block$1.rx_start_plus_1[7:0]$208
+   104/233: $5$unnamed_block$1.pzt_stop_plus_1[7:0]$207
+   105/233: $5$unnamed_block$1.new_rx_stop[7:0]$206
+   106/233: $5$unnamed_block$1.new_rx_start[7:0]$205
+   107/233: $5$unnamed_block$1.err_bit[7:0]$204
+   108/233: $5\reg_read$func$LL5k_7R.v:517$5.$result[7:0]$202
+   109/233: $4\reg_read$func$LL5k_7R.v:517$5.$result[7:0]$188
+   110/233: $4\reg_read$func$LL5k_7R.v:517$5.a[7:0]$189
+   111/233: $4\reg_read$func$LL5k_7R.v:594$11.a[7:0]$201
+   112/233: $4\reg_read$func$LL5k_7R.v:594$11.$result[7:0]$200
+   113/233: $4\sat_plus_1$func$LL5k_7R.v:574$10.v[7:0]$199
+   114/233: $4\sat_plus_1$func$LL5k_7R.v:574$10.$result[7:0]$198
+   115/233: $4\sat_plus_1$func$LL5k_7R.v:564$9.v[7:0]$197
+   116/233: $4\sat_plus_1$func$LL5k_7R.v:564$9.$result[7:0]$196
+   117/233: $4\sat_plus_1$func$LL5k_7R.v:552$8.v[7:0]$195
+   118/233: $4\sat_plus_1$func$LL5k_7R.v:552$8.$result[7:0]$194
+   119/233: $4\sat_plus_1$func$LL5k_7R.v:542$7.v[7:0]$193
+   120/233: $4\sat_plus_1$func$LL5k_7R.v:542$7.$result[7:0]$192
+   121/233: $4\sat_plus_1$func$LL5k_7R.v:534$6.v[7:0]$191
+   122/233: $4\sat_plus_1$func$LL5k_7R.v:534$6.$result[7:0]$190
+   123/233: $4$unnamed_block$1.rx_start_plus_1[7:0]$187
+   124/233: $4$unnamed_block$1.pzt_stop_plus_1[7:0]$186
+   125/233: $4$unnamed_block$1.new_rx_stop[7:0]$185
+   126/233: $4$unnamed_block$1.new_rx_start[7:0]$184
+   127/233: $4$unnamed_block$1.err_bit[7:0]$183
+   128/233: $3$unnamed_block$1.err_bit[7:0]$163
+   129/233: $3\reg_read$func$LL5k_7R.v:594$11.a[7:0]$181
+   130/233: $3\reg_read$func$LL5k_7R.v:594$11.$result[7:0]$180
+   131/233: $3\sat_plus_1$func$LL5k_7R.v:574$10.v[7:0]$179
+   132/233: $3\sat_plus_1$func$LL5k_7R.v:574$10.$result[7:0]$178
+   133/233: $3\sat_plus_1$func$LL5k_7R.v:564$9.v[7:0]$177
+   134/233: $3\sat_plus_1$func$LL5k_7R.v:564$9.$result[7:0]$176
+   135/233: $3\sat_plus_1$func$LL5k_7R.v:552$8.v[7:0]$175
+   136/233: $3\sat_plus_1$func$LL5k_7R.v:552$8.$result[7:0]$174
+   137/233: $3\sat_plus_1$func$LL5k_7R.v:542$7.v[7:0]$173
+   138/233: $3\sat_plus_1$func$LL5k_7R.v:542$7.$result[7:0]$172
+   139/233: $3\sat_plus_1$func$LL5k_7R.v:534$6.v[7:0]$171
+   140/233: $3\sat_plus_1$func$LL5k_7R.v:534$6.$result[7:0]$170
+   141/233: $3\reg_read$func$LL5k_7R.v:517$5.a[7:0]$169
+   142/233: $3\reg_read$func$LL5k_7R.v:517$5.$result[7:0]$168
+   143/233: $3$unnamed_block$1.rx_start_plus_1[7:0]$167
+   144/233: $3$unnamed_block$1.pzt_stop_plus_1[7:0]$166
+   145/233: $3$unnamed_block$1.new_rx_stop[7:0]$165
+   146/233: $3$unnamed_block$1.new_rx_start[7:0]$164
+   147/233: $3\sat_plus_1$func$LL5k_7R.v:507$3.$result[7:0]$157
+   148/233: $3\sat_plus_1$func$LL5k_7R.v:506$2.$result[7:0]$154
+   149/233: $2\reg_read$func$LL5k_7R.v:594$11.a[7:0]$152
+   150/233: $2\reg_read$func$LL5k_7R.v:594$11.$result[7:0]$151
+   151/233: $2\sat_plus_1$func$LL5k_7R.v:574$10.v[7:0]$150
+   152/233: $2\sat_plus_1$func$LL5k_7R.v:574$10.$result[7:0]$149
+   153/233: $2\sat_plus_1$func$LL5k_7R.v:564$9.v[7:0]$148
+   154/233: $2\sat_plus_1$func$LL5k_7R.v:564$9.$result[7:0]$147
+   155/233: $2\sat_plus_1$func$LL5k_7R.v:552$8.v[7:0]$146
+   156/233: $2\sat_plus_1$func$LL5k_7R.v:552$8.$result[7:0]$145
+   157/233: $2\sat_plus_1$func$LL5k_7R.v:542$7.v[7:0]$144
+   158/233: $2\sat_plus_1$func$LL5k_7R.v:542$7.$result[7:0]$143
+   159/233: $2\sat_plus_1$func$LL5k_7R.v:534$6.v[7:0]$142
+   160/233: $2\sat_plus_1$func$LL5k_7R.v:534$6.$result[7:0]$141
+   161/233: $2\reg_read$func$LL5k_7R.v:517$5.a[7:0]$140
+   162/233: $2\reg_read$func$LL5k_7R.v:517$5.$result[7:0]$139
+   163/233: $2$unnamed_block$1.rx_start_plus_1[7:0]$130
+   164/233: $2$unnamed_block$1.pzt_stop_plus_1[7:0]$129
+   165/233: $2$unnamed_block$1.new_rx_stop[7:0]$128
+   166/233: $2$unnamed_block$1.new_rx_start[7:0]$127
+   167/233: $2$unnamed_block$1.err_bit[7:0]$126
+   168/233: $2\calc_chk4$func$LL5k_7R.v:509$4.$result[7:0]$135
+   169/233: $2\calc_chk4$func$LL5k_7R.v:509$4.b3[7:0]$138
+   170/233: $2\calc_chk4$func$LL5k_7R.v:509$4.b2[7:0]$137
+   171/233: $2\calc_chk4$func$LL5k_7R.v:509$4.b1[7:0]$136
+   172/233: $2\sat_plus_1$func$LL5k_7R.v:507$3.$result[7:0]$133
+   173/233: $2\sat_plus_1$func$LL5k_7R.v:507$3.v[7:0]$134
+   174/233: $2\sat_plus_1$func$LL5k_7R.v:506$2.$result[7:0]$131
+   175/233: $2\sat_plus_1$func$LL5k_7R.v:506$2.v[7:0]$132
+   176/233: $0\frame_ready[0:0]
+   177/233: $1\tx_start_byte$func$LL5k_7R.v:634$17.b[7:0]$116
+   178/233: $1\calc_chk4$func$LL5k_7R.v:634$16.b3[7:0]$115
+   179/233: $1\calc_chk4$func$LL5k_7R.v:634$16.b2[7:0]$114
+   180/233: $1\calc_chk4$func$LL5k_7R.v:634$16.b1[7:0]$113
+   181/233: $1\calc_chk4$func$LL5k_7R.v:634$16.$result[7:0]$112
+   182/233: $1\tx_start_byte$func$LL5k_7R.v:629$15.b[7:0]$111
+   183/233: $1\tx_start_byte$func$LL5k_7R.v:624$14.b[7:0]$110
+   184/233: $1\tx_start_byte$func$LL5k_7R.v:619$13.b[7:0]$109
+   185/233: $1\reg_read$func$LL5k_7R.v:594$11.a[7:0]$108
+   186/233: $1\reg_read$func$LL5k_7R.v:594$11.$result[7:0]$107
+   187/233: $1\sat_plus_1$func$LL5k_7R.v:574$10.v[7:0]$106
+   188/233: $1\sat_plus_1$func$LL5k_7R.v:574$10.$result[7:0]$105
+   189/233: $1\sat_plus_1$func$LL5k_7R.v:564$9.v[7:0]$104
+   190/233: $1\sat_plus_1$func$LL5k_7R.v:564$9.$result[7:0]$103
+   191/233: $1\sat_plus_1$func$LL5k_7R.v:552$8.v[7:0]$102
+   192/233: $1\sat_plus_1$func$LL5k_7R.v:552$8.$result[7:0]$101
+   193/233: $1\sat_plus_1$func$LL5k_7R.v:542$7.v[7:0]$100
+   194/233: $1\sat_plus_1$func$LL5k_7R.v:542$7.$result[7:0]$99
+   195/233: $1\sat_plus_1$func$LL5k_7R.v:534$6.v[7:0]$98
+   196/233: $1\sat_plus_1$func$LL5k_7R.v:534$6.$result[7:0]$97
+   197/233: $1\reg_read$func$LL5k_7R.v:517$5.a[7:0]$96
+   198/233: $1\reg_read$func$LL5k_7R.v:517$5.$result[7:0]$95
+   199/233: $1\calc_chk4$func$LL5k_7R.v:509$4.b3[7:0]$94
+   200/233: $1\calc_chk4$func$LL5k_7R.v:509$4.b2[7:0]$93
+   201/233: $1\calc_chk4$func$LL5k_7R.v:509$4.b1[7:0]$92
+   202/233: $1\calc_chk4$func$LL5k_7R.v:509$4.$result[7:0]$91
+   203/233: $1\sat_plus_1$func$LL5k_7R.v:507$3.v[7:0]$90
+   204/233: $1\sat_plus_1$func$LL5k_7R.v:507$3.$result[7:0]$89
+   205/233: $1\sat_plus_1$func$LL5k_7R.v:506$2.v[7:0]$88
+   206/233: $1\sat_plus_1$func$LL5k_7R.v:506$2.$result[7:0]$87
+   207/233: $1$unnamed_block$1.rx_start_plus_1[7:0]$86
+   208/233: $1$unnamed_block$1.pzt_stop_plus_1[7:0]$85
+   209/233: $1$unnamed_block$1.new_rx_stop[7:0]$84
+   210/233: $1$unnamed_block$1.new_rx_start[7:0]$83
+   211/233: $1$unnamed_block$1.err_bit[7:0]$82
+   212/233: $0\resp_pending[0:0]
+   213/233: $0\resp_idx[2:0]
+   214/233: $0\resp_data[7:0]
+   215/233: $0\resp_addr[7:0]
+   216/233: $0\resp_status[7:0]
+   217/233: $0\f_count[2:0]
+   218/233: $0\f_chk[7:0]
+   219/233: $0\f_data[7:0]
+   220/233: $0\f_addr[7:0]
+   221/233: $0\f_op[7:0]
+   222/233: $0\status_rx_stop_clamped[0:0]
+   223/233: $0\status_rx_start_clamped[0:0]
+   224/233: $0\reg_test[7:0]
+   225/233: $0\reg_rx_window_stop_time[7:0]
+   226/233: $0\reg_rx_window_start_time[7:0]
+   227/233: $0\reg_pzt_clamp_stop_time[7:0]
+   228/233: $0\reg_pzt_clamp_start_time[7:0]
+   229/233: $1\tx_busy[0:0]
+   230/233: $1\tx_shift[7:0]
+   231/233: $1\tx_bit_cnt[2:0]
+   232/233: $1\tx_tick_cnt[15:0]
+   233/233: $1\tx_state[1:0]
+Creating decoders for process `\LL5k_WIP.$proc$LL5k_7R.v:238$35'.
+     1/6: $0\uart_tx[0:0]
+     2/6: $0\tx_busy[0:0]
+     3/6: $0\tx_shift[7:0]
+     4/6: $0\tx_bit_cnt[2:0]
+     5/6: $0\tx_tick_cnt[15:0]
+     6/6: $0\tx_state[1:0]
+Creating decoders for process `\LL5k_WIP.$proc$LL5k_7R.v:116$22'.
+     1/6: $0\rx_byte_valid[0:0]
+     2/6: $0\rx_byte[7:0]
+     3/6: $0\rx_shift[7:0]
+     4/6: $0\rx_bit_cnt[2:0]
+     5/6: $0\rx_tick_cnt[15:0]
+     6/6: $0\rx_state[1:0]
+Creating decoders for process `\LL5k_WIP.$proc$LL5k_7R.v:74$18'.
+     1/2: $0\por_n[0:0]
+     2/2: $0\por_cnt[31:0]
+
+2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\LL5k_WIP.\tx_state' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3873' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_tick_cnt' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3874' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_bit_cnt' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3875' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_shift' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3876' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_busy' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3877' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\reg_pzt_clamp_start_time' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3878' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\reg_pzt_clamp_stop_time' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3879' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\reg_rx_window_start_time' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3880' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\reg_rx_window_stop_time' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3881' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\reg_test' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3882' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\status_rx_start_clamped' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3883' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\status_rx_stop_clamped' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3884' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\f_op' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3885' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\f_addr' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3886' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\f_data' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3887' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\f_chk' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3888' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\f_count' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3889' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\frame_ready' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3890' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\resp_status' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3891' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\resp_addr' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3892' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\resp_data' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3893' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\resp_idx' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3894' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\resp_pending' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3895' with positive edge clock.
+Creating register for signal `\LL5k_WIP.$unnamed_block$1.err_bit' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3896' with positive edge clock.
+Creating register for signal `\LL5k_WIP.$unnamed_block$1.new_rx_start' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3897' with positive edge clock.
+Creating register for signal `\LL5k_WIP.$unnamed_block$1.new_rx_stop' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3898' with positive edge clock.
+Creating register for signal `\LL5k_WIP.$unnamed_block$1.pzt_stop_plus_1' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3899' with positive edge clock.
+Creating register for signal `\LL5k_WIP.$unnamed_block$1.rx_start_plus_1' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3900' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:506$2.$result' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3901' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:506$2.v' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3902' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:507$3.$result' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3903' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:507$3.v' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3904' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\calc_chk4$func$LL5k_7R.v:509$4.$result' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3905' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\calc_chk4$func$LL5k_7R.v:509$4.b1' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3906' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\calc_chk4$func$LL5k_7R.v:509$4.b2' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3907' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\calc_chk4$func$LL5k_7R.v:509$4.b3' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3908' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\reg_read$func$LL5k_7R.v:517$5.$result' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3909' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\reg_read$func$LL5k_7R.v:517$5.a' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3910' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:534$6.$result' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3911' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:534$6.v' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3912' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:542$7.$result' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3913' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:542$7.v' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3914' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:552$8.$result' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3915' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:552$8.v' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3916' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:564$9.$result' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3917' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:564$9.v' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3918' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:574$10.$result' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3919' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\sat_plus_1$func$LL5k_7R.v:574$10.v' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3920' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\reg_read$func$LL5k_7R.v:594$11.$result' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3921' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\reg_read$func$LL5k_7R.v:594$11.a' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3922' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_start_byte$func$LL5k_7R.v:619$13.b' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3923' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_start_byte$func$LL5k_7R.v:624$14.b' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3924' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_start_byte$func$LL5k_7R.v:629$15.b' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3925' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\calc_chk4$func$LL5k_7R.v:634$16.$result' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3926' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\calc_chk4$func$LL5k_7R.v:634$16.b1' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3927' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\calc_chk4$func$LL5k_7R.v:634$16.b2' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3928' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\calc_chk4$func$LL5k_7R.v:634$16.b3' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3929' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_start_byte$func$LL5k_7R.v:634$17.b' using process `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+  created $dff cell `$procdff$3930' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\uart_tx' using process `\LL5k_WIP.$proc$LL5k_7R.v:238$35'.
+  created $dff cell `$procdff$3931' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_state' using process `\LL5k_WIP.$proc$LL5k_7R.v:238$35'.
+  created $dff cell `$procdff$3932' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_tick_cnt' using process `\LL5k_WIP.$proc$LL5k_7R.v:238$35'.
+  created $dff cell `$procdff$3933' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_bit_cnt' using process `\LL5k_WIP.$proc$LL5k_7R.v:238$35'.
+  created $dff cell `$procdff$3934' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_shift' using process `\LL5k_WIP.$proc$LL5k_7R.v:238$35'.
+  created $dff cell `$procdff$3935' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\tx_busy' using process `\LL5k_WIP.$proc$LL5k_7R.v:238$35'.
+  created $dff cell `$procdff$3936' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\rx_state' using process `\LL5k_WIP.$proc$LL5k_7R.v:116$22'.
+  created $dff cell `$procdff$3937' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\rx_tick_cnt' using process `\LL5k_WIP.$proc$LL5k_7R.v:116$22'.
+  created $dff cell `$procdff$3938' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\rx_bit_cnt' using process `\LL5k_WIP.$proc$LL5k_7R.v:116$22'.
+  created $dff cell `$procdff$3939' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\rx_shift' using process `\LL5k_WIP.$proc$LL5k_7R.v:116$22'.
+  created $dff cell `$procdff$3940' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\rx_byte' using process `\LL5k_WIP.$proc$LL5k_7R.v:116$22'.
+  created $dff cell `$procdff$3941' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\rx_byte_valid' using process `\LL5k_WIP.$proc$LL5k_7R.v:116$22'.
+  created $dff cell `$procdff$3942' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\por_cnt' using process `\LL5k_WIP.$proc$LL5k_7R.v:74$18'.
+  created $dff cell `$procdff$3943' with positive edge clock.
+Creating register for signal `\LL5k_WIP.\por_n' using process `\LL5k_WIP.$proc$LL5k_7R.v:74$18'.
+  created $dff cell `$procdff$3944' with positive edge clock.
+
+2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `LL5k_WIP.$proc$LL5k_7R.v:400$341'.
+Removing empty process `LL5k_WIP.$proc$LL5k_7R.v:90$340'.
+Found and cleaned up 35 empty switches in `\LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+Removing empty process `LL5k_WIP.$proc$LL5k_7R.v:425$45'.
+Found and cleaned up 6 empty switches in `\LL5k_WIP.$proc$LL5k_7R.v:238$35'.
+Removing empty process `LL5k_WIP.$proc$LL5k_7R.v:238$35'.
+Found and cleaned up 9 empty switches in `\LL5k_WIP.$proc$LL5k_7R.v:116$22'.
+Removing empty process `LL5k_WIP.$proc$LL5k_7R.v:116$22'.
+Found and cleaned up 2 empty switches in `\LL5k_WIP.$proc$LL5k_7R.v:74$18'.
+Removing empty process `LL5k_WIP.$proc$LL5k_7R.v:74$18'.
+Cleaned up 52 empty switches.
+
+2.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+<suppressed ~267 debug messages>
+
+2.4. Executing FLATTEN pass (flatten design).
+
+2.5. Executing TRIBUF pass.
+
+2.6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+2.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+Removed 743 unused cells and 2069 unused wires.
+<suppressed ~764 debug messages>
+
+2.9. Executing CHECK pass (checking for obvious problems).
+Checking module LL5k_WIP...
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_shift [7]:
+    port Q[7] of cell $procdff$3876 ($dff)
+    port Q[7] of cell $procdff$3935 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_shift [6]:
+    port Q[6] of cell $procdff$3876 ($dff)
+    port Q[6] of cell $procdff$3935 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_shift [5]:
+    port Q[5] of cell $procdff$3876 ($dff)
+    port Q[5] of cell $procdff$3935 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_shift [4]:
+    port Q[4] of cell $procdff$3876 ($dff)
+    port Q[4] of cell $procdff$3935 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_shift [3]:
+    port Q[3] of cell $procdff$3876 ($dff)
+    port Q[3] of cell $procdff$3935 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_shift [2]:
+    port Q[2] of cell $procdff$3876 ($dff)
+    port Q[2] of cell $procdff$3935 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_shift [1]:
+    port Q[1] of cell $procdff$3876 ($dff)
+    port Q[1] of cell $procdff$3935 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_shift [0]:
+    port Q[0] of cell $procdff$3876 ($dff)
+    port Q[0] of cell $procdff$3935 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_bit_cnt [2]:
+    port Q[2] of cell $procdff$3875 ($dff)
+    port Q[2] of cell $procdff$3934 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_bit_cnt [1]:
+    port Q[1] of cell $procdff$3875 ($dff)
+    port Q[1] of cell $procdff$3934 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_bit_cnt [0]:
+    port Q[0] of cell $procdff$3875 ($dff)
+    port Q[0] of cell $procdff$3934 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [15]:
+    port Q[15] of cell $procdff$3874 ($dff)
+    port Q[15] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [14]:
+    port Q[14] of cell $procdff$3874 ($dff)
+    port Q[14] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [13]:
+    port Q[13] of cell $procdff$3874 ($dff)
+    port Q[13] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [12]:
+    port Q[12] of cell $procdff$3874 ($dff)
+    port Q[12] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [11]:
+    port Q[11] of cell $procdff$3874 ($dff)
+    port Q[11] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [10]:
+    port Q[10] of cell $procdff$3874 ($dff)
+    port Q[10] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [9]:
+    port Q[9] of cell $procdff$3874 ($dff)
+    port Q[9] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [8]:
+    port Q[8] of cell $procdff$3874 ($dff)
+    port Q[8] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [7]:
+    port Q[7] of cell $procdff$3874 ($dff)
+    port Q[7] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [6]:
+    port Q[6] of cell $procdff$3874 ($dff)
+    port Q[6] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [5]:
+    port Q[5] of cell $procdff$3874 ($dff)
+    port Q[5] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [4]:
+    port Q[4] of cell $procdff$3874 ($dff)
+    port Q[4] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [3]:
+    port Q[3] of cell $procdff$3874 ($dff)
+    port Q[3] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [2]:
+    port Q[2] of cell $procdff$3874 ($dff)
+    port Q[2] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [1]:
+    port Q[1] of cell $procdff$3874 ($dff)
+    port Q[1] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_tick_cnt [0]:
+    port Q[0] of cell $procdff$3874 ($dff)
+    port Q[0] of cell $procdff$3933 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_state [1]:
+    port Q[1] of cell $procdff$3873 ($dff)
+    port Q[1] of cell $procdff$3932 ($dff)
+Warning: multiple conflicting drivers for LL5k_WIP.\tx_state [0]:
+    port Q[0] of cell $procdff$3873 ($dff)
+    port Q[0] of cell $procdff$3932 ($dff)
+Found and reported 29 problems.
+
+2.10. Executing OPT pass (performing simple optimizations).
+
+2.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+<suppressed ~117 debug messages>
+Removed a total of 39 cells.
+
+2.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \LL5k_WIP..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port B of cell $procmux$3866: \por_n -> 1'1
+      Replacing known input bits on port A of cell $procmux$3864: \por_n -> 1'0
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$1162.
+    dead port 1/2 on $mux $procmux$1165.
+    dead port 1/2 on $mux $procmux$1168.
+    dead port 2/2 on $mux $procmux$1170.
+    dead port 2/2 on $mux $procmux$1173.
+    dead port 2/2 on $mux $procmux$1181.
+    dead port 1/2 on $mux $procmux$1184.
+    dead port 1/2 on $mux $procmux$1187.
+    dead port 1/2 on $mux $procmux$1190.
+    dead port 2/2 on $mux $procmux$1192.
+    dead port 1/2 on $mux $procmux$1195.
+    dead port 1/2 on $mux $procmux$1198.
+    dead port 2/2 on $mux $procmux$1200.
+    dead port 2/2 on $mux $procmux$1203.
+    dead port 1/2 on $mux $procmux$1241.
+    dead port 1/2 on $mux $procmux$1244.
+    dead port 1/2 on $mux $procmux$1247.
+    dead port 2/2 on $mux $procmux$1249.
+    dead port 1/2 on $mux $procmux$1252.
+    dead port 1/2 on $mux $procmux$1255.
+    dead port 2/2 on $mux $procmux$1257.
+    dead port 2/2 on $mux $procmux$1260.
+    dead port 2/2 on $mux $procmux$1349.
+    dead port 1/2 on $mux $procmux$1352.
+    dead port 1/2 on $mux $procmux$1355.
+    dead port 2/2 on $mux $procmux$1357.
+    dead port 1/2 on $mux $procmux$1360.
+    dead port 1/2 on $mux $procmux$1363.
+    dead port 2/2 on $mux $procmux$1365.
+    dead port 2/2 on $mux $procmux$1368.
+    dead port 1/2 on $mux $procmux$1457.
+    dead port 1/2 on $mux $procmux$1460.
+    dead port 2/2 on $mux $procmux$1462.
+    dead port 1/2 on $mux $procmux$1465.
+    dead port 1/2 on $mux $procmux$1468.
+    dead port 2/2 on $mux $procmux$1470.
+    dead port 2/2 on $mux $procmux$1473.
+    dead port 1/2 on $mux $procmux$1553.
+    dead port 1/2 on $mux $procmux$1556.
+    dead port 2/2 on $mux $procmux$1558.
+    dead port 1/2 on $mux $procmux$1561.
+    dead port 1/2 on $mux $procmux$1564.
+    dead port 2/2 on $mux $procmux$1566.
+    dead port 2/2 on $mux $procmux$1569.
+    dead port 2/2 on $mux $procmux$1697.
+    dead port 1/2 on $mux $procmux$1700.
+    dead port 2/2 on $mux $procmux$1702.
+    dead port 1/2 on $mux $procmux$1705.
+    dead port 1/2 on $mux $procmux$1708.
+    dead port 2/2 on $mux $procmux$1710.
+    dead port 2/2 on $mux $procmux$1713.
+    dead port 1/2 on $mux $procmux$1793.
+    dead port 2/2 on $mux $procmux$1795.
+    dead port 1/2 on $mux $procmux$1798.
+    dead port 1/2 on $mux $procmux$1801.
+    dead port 2/2 on $mux $procmux$1803.
+    dead port 2/2 on $mux $procmux$1806.
+    dead port 1/2 on $mux $procmux$1877.
+    dead port 2/2 on $mux $procmux$1879.
+    dead port 1/2 on $mux $procmux$1882.
+    dead port 1/2 on $mux $procmux$1885.
+    dead port 2/2 on $mux $procmux$1887.
+    dead port 2/2 on $mux $procmux$1890.
+    dead port 2/2 on $mux $procmux$2302.
+    dead port 1/2 on $mux $procmux$2305.
+    dead port 1/2 on $mux $procmux$2308.
+    dead port 2/2 on $mux $procmux$2310.
+    dead port 2/2 on $mux $procmux$2313.
+    dead port 2/2 on $mux $procmux$2320.
+    dead port 1/2 on $mux $procmux$2323.
+    dead port 1/2 on $mux $procmux$2326.
+    dead port 2/2 on $mux $procmux$2328.
+    dead port 2/2 on $mux $procmux$2331.
+    dead port 1/2 on $mux $procmux$2578.
+    dead port 1/2 on $mux $procmux$2581.
+    dead port 2/2 on $mux $procmux$2583.
+    dead port 2/2 on $mux $procmux$2586.
+    dead port 2/2 on $mux $procmux$2599.
+    dead port 1/2 on $mux $procmux$2602.
+    dead port 2/2 on $mux $procmux$2604.
+    dead port 2/2 on $mux $procmux$2607.
+    dead port 1/2 on $mux $procmux$2830.
+    dead port 2/2 on $mux $procmux$2832.
+    dead port 2/2 on $mux $procmux$2835.
+    dead port 2/2 on $mux $procmux$2841.
+    dead port 2/2 on $mux $procmux$2844.
+Removed 86 multiplexer ports.
+<suppressed ~389 debug messages>
+
+2.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \LL5k_WIP.
+    New ctrl vector for $pmux cell $procmux$1154: { $auto$opt_reduce.cc:137:opt_pmux$3950 $eq$LL5k_7R.v:525$221_Y $eq$LL5k_7R.v:529$236_Y $eq$LL5k_7R.v:549$261_Y $eq$LL5k_7R.v:571$282_Y $eq$LL5k_7R.v:585$292_Y }
+    New ctrl vector for $pmux cell $procmux$2591: { $auto$opt_reduce.cc:137:opt_pmux$3952 $eq$LL5k_7R.v:525$221_Y $eq$LL5k_7R.v:529$236_Y $eq$LL5k_7R.v:549$261_Y $eq$LL5k_7R.v:571$282_Y $eq$LL5k_7R.v:585$292_Y }
+    New ctrl vector for $pmux cell $procmux$3696: { $procmux$3699_CMP $procmux$3698_CMP $auto$opt_reduce.cc:137:opt_pmux$3954 }
+  Optimizing cells in module \LL5k_WIP.
+Performed a total of 3 changes.
+
+2.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+2.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+Removed 0 unused cells and 130 unused wires.
+<suppressed ~1 debug messages>
+
+2.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.10.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \LL5k_WIP..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~305 debug messages>
+
+2.10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \LL5k_WIP.
+    New ctrl vector for $pmux cell $procmux$3736: $auto$opt_reduce.cc:137:opt_pmux$3956
+    New ctrl vector for $pmux cell $procmux$3820: { $procmux$3813_CMP $procmux$3812_CMP $auto$opt_reduce.cc:137:opt_pmux$3958 }
+  Optimizing cells in module \LL5k_WIP.
+Performed a total of 2 changes.
+
+2.10.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.10.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.10.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.10.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.10.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \LL5k_WIP..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~302 debug messages>
+
+2.10.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \LL5k_WIP.
+Performed a total of 0 changes.
+
+2.10.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.10.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.10.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.10.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.10.23. Finished fast OPT passes. (There is nothing left to do.)
+
+2.11. Executing FSM pass (extract and optimize FSM).
+
+2.11.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking LL5k_WIP.f_count as FSM state register:
+    Register has an initialization value.
+Not marking LL5k_WIP.resp_idx as FSM state register:
+    Register has an initialization value.
+Found FSM state register LL5k_WIP.rx_state.
+Not marking LL5k_WIP.tx_state as FSM state register:
+    Users of register don't seem to benefit from recoding.
+
+2.11.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\rx_state' from module `\LL5k_WIP'.
+  found $dff cell for state register: $procdff$3937
+  root of input selection tree: $0\rx_state[1:0]
+  found reset state: 2'00 (guessed from mux tree)
+  found ctrl input: \por_n
+  found state code: 2'00
+  found ctrl input: $procmux$3774_CMP
+  found ctrl input: $procmux$3793_CMP
+  found ctrl input: $procmux$3812_CMP
+  found ctrl input: $procmux$3813_CMP
+  found ctrl input: $eq$LL5k_7R.v:166$28_Y
+  found ctrl input: $eq$LL5k_7R.v:171$29_Y
+  found state code: 2'11
+  found ctrl input: $eq$LL5k_7R.v:145$25_Y
+  found ctrl input: \uart_rx
+  found state code: 2'10
+  found state code: 2'01
+  found ctrl output: $procmux$3774_CMP
+  found ctrl output: $procmux$3793_CMP
+  found ctrl output: $procmux$3812_CMP
+  found ctrl output: $procmux$3813_CMP
+  ctrl inputs: { $eq$LL5k_7R.v:171$29_Y $eq$LL5k_7R.v:166$28_Y $eq$LL5k_7R.v:145$25_Y \por_n \uart_rx }
+  ctrl outputs: { $procmux$3813_CMP $procmux$3812_CMP $procmux$3793_CMP $procmux$3774_CMP $0\rx_state[1:0] }
+  transition:       2'00 5'---0- ->       2'00 6'100000
+  transition:       2'00 5'---10 ->       2'01 6'100001
+  transition:       2'00 5'---11 ->       2'00 6'100000
+  transition:       2'10 5'---0- ->       2'00 6'001000
+  transition:       2'10 5'-0-1- ->       2'10 6'001010
+  transition:       2'10 5'01-1- ->       2'10 6'001010
+  transition:       2'10 5'11-1- ->       2'11 6'001011
+  transition:       2'01 5'---0- ->       2'00 6'010000
+  transition:       2'01 5'--01- ->       2'01 6'010001
+  transition:       2'01 5'--110 ->       2'10 6'010010
+  transition:       2'01 5'--111 ->       2'00 6'010000
+  transition:       2'11 5'---0- ->       2'00 6'000100
+  transition:       2'11 5'-0-1- ->       2'11 6'000111
+  transition:       2'11 5'-1-1- ->       2'00 6'000100
+
+2.11.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\rx_state$3959' from module `\LL5k_WIP'.
+
+2.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+Removed 13 unused cells and 13 unused wires.
+<suppressed ~14 debug messages>
+
+2.11.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\rx_state$3959' from module `\LL5k_WIP'.
+  Removing unused output signal $0\rx_state[1:0] [0].
+  Removing unused output signal $0\rx_state[1:0] [1].
+
+2.11.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\rx_state$3959' from module `\LL5k_WIP' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00 -> ---1
+  10 -> --1-
+  01 -> -1--
+  11 -> 1---
+
+2.11.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\rx_state$3959' from module `LL5k_WIP':
+-------------------------------------
+
+  Information on FSM $fsm$\rx_state$3959 (\rx_state):
+
+  Number of input signals:    5
+  Number of output signals:   4
+  Number of state bits:       4
+
+  Input signals:
+    0: \uart_rx
+    1: \por_n
+    2: $eq$LL5k_7R.v:145$25_Y
+    3: $eq$LL5k_7R.v:166$28_Y
+    4: $eq$LL5k_7R.v:171$29_Y
+
+  Output signals:
+    0: $procmux$3774_CMP
+    1: $procmux$3793_CMP
+    2: $procmux$3812_CMP
+    3: $procmux$3813_CMP
+
+  State encoding:
+    0:     4'---1  <RESET STATE>
+    1:     4'--1-
+    2:     4'-1--
+    3:     4'1---
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 5'---11   ->     0 4'1000
+      1:     0 5'---0-   ->     0 4'1000
+      2:     0 5'---10   ->     2 4'1000
+      3:     1 5'---0-   ->     0 4'0010
+      4:     1 5'-0-1-   ->     1 4'0010
+      5:     1 5'01-1-   ->     1 4'0010
+      6:     1 5'11-1-   ->     3 4'0010
+      7:     2 5'--111   ->     0 4'0100
+      8:     2 5'---0-   ->     0 4'0100
+      9:     2 5'--110   ->     1 4'0100
+     10:     2 5'--01-   ->     2 4'0100
+     11:     3 5'---0-   ->     0 4'0001
+     12:     3 5'-1-1-   ->     0 4'0001
+     13:     3 5'-0-1-   ->     3 4'0001
+
+-------------------------------------
+
+2.11.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\rx_state$3959' from module `\LL5k_WIP'.
+
+2.12. Executing OPT pass (performing simple optimizations).
+
+2.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+<suppressed ~1 debug messages>
+
+2.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \LL5k_WIP..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~293 debug messages>
+
+2.12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \LL5k_WIP.
+Performed a total of 0 changes.
+
+2.12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.12.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$3944 ($dff) from module LL5k_WIP (D = $procmux$3864_Y, Q = \por_n, rval = 1'1).
+Adding EN signal on $procdff$3943 ($dff) from module LL5k_WIP (D = $add$LL5k_7R.v:85$21_Y, Q = \por_cnt).
+Adding SRST signal on $procdff$3942 ($dff) from module LL5k_WIP (D = $procmux$3769_Y, Q = \rx_byte_valid, rval = 1'0).
+Adding SRST signal on $procdff$3941 ($dff) from module LL5k_WIP (D = $procmux$3783_Y, Q = \rx_byte, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$4026 ($sdff) from module LL5k_WIP (D = \rx_shift, Q = \rx_byte).
+Adding SRST signal on $procdff$3940 ($dff) from module LL5k_WIP (D = $procmux$3792_Y, Q = \rx_shift, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$4030 ($sdff) from module LL5k_WIP (D = { \uart_rx \rx_shift [7:1] }, Q = \rx_shift).
+Adding SRST signal on $procdff$3939 ($dff) from module LL5k_WIP (D = $procmux$3804_Y, Q = \rx_bit_cnt, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$4034 ($sdff) from module LL5k_WIP (D = $procmux$3804_Y, Q = \rx_bit_cnt).
+Adding SRST signal on $procdff$3938 ($dff) from module LL5k_WIP (D = $procmux$3820_Y, Q = \rx_tick_cnt, rval = 16'0000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$4046 ($sdff) from module LL5k_WIP (D = $procmux$3820_Y, Q = \rx_tick_cnt).
+Adding SRST signal on $procdff$3935 ($dff) from module LL5k_WIP (D = $procmux$3716_Y, Q = \tx_shift, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$4054 ($sdff) from module LL5k_WIP (D = { 1'0 \tx_shift [7:1] }, Q = \tx_shift).
+Adding SRST signal on $procdff$3934 ($dff) from module LL5k_WIP (D = $procmux$3728_Y, Q = \tx_bit_cnt, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$4058 ($sdff) from module LL5k_WIP (D = $procmux$3724_Y, Q = \tx_bit_cnt).
+Adding SRST signal on $procdff$3933 ($dff) from module LL5k_WIP (D = $procmux$3736_Y, Q = \tx_tick_cnt, rval = 16'0000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$4062 ($sdff) from module LL5k_WIP (D = $procmux$3734_Y, Q = \tx_tick_cnt).
+Adding SRST signal on $procdff$3932 ($dff) from module LL5k_WIP (D = $procmux$3752_Y, Q = \tx_state, rval = 2'00).
+Adding EN signal on $auto$ff.cc:337:slice$4064 ($sdff) from module LL5k_WIP (D = $procmux$3752_Y, Q = \tx_state).
+Adding SRST signal on $procdff$3931 ($dff) from module LL5k_WIP (D = $procmux$3696_Y, Q = \uart_tx, rval = 1'1).
+Adding SRST signal on $procdff$3895 ($dff) from module LL5k_WIP (D = $procmux$3326_Y, Q = \resp_pending, rval = 1'0).
+Adding SRST signal on $procdff$3894 ($dff) from module LL5k_WIP (D = $procmux$3347_Y, Q = \resp_idx, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$4080 ($sdff) from module LL5k_WIP (D = $procmux$3347_Y, Q = \resp_idx).
+Adding SRST signal on $procdff$3893 ($dff) from module LL5k_WIP (D = $procmux$3362_Y, Q = \resp_data, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$4084 ($sdff) from module LL5k_WIP (D = $procmux$3360_Y, Q = \resp_data).
+Adding SRST signal on $procdff$3892 ($dff) from module LL5k_WIP (D = $procmux$3368_Y, Q = \resp_addr, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$4086 ($sdff) from module LL5k_WIP (D = \f_addr, Q = \resp_addr).
+Adding SRST signal on $procdff$3891 ($dff) from module LL5k_WIP (D = $procmux$3374_Y, Q = \resp_status, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$4088 ($sdff) from module LL5k_WIP (D = { 5'00000 \status_rx_stop_clamped \status_rx_start_clamped $3$unnamed_block$1.err_bit[7:0]$163 [0] }, Q = \resp_status).
+Adding SRST signal on $procdff$3890 ($dff) from module LL5k_WIP (D = $procmux$3189_Y, Q = \frame_ready, rval = 1'0).
+Adding SRST signal on $procdff$3889 ($dff) from module LL5k_WIP (D = $procmux$3394_Y, Q = \f_count, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$4097 ($sdff) from module LL5k_WIP (D = $procmux$3392_Y, Q = \f_count).
+Adding EN signal on $procdff$3888 ($dff) from module LL5k_WIP (D = \rx_byte, Q = \f_chk).
+Adding EN signal on $procdff$3887 ($dff) from module LL5k_WIP (D = \rx_byte, Q = \f_data).
+Adding EN signal on $procdff$3886 ($dff) from module LL5k_WIP (D = \rx_byte, Q = \f_addr).
+Adding EN signal on $procdff$3885 ($dff) from module LL5k_WIP (D = \rx_byte, Q = \f_op).
+Adding SRST signal on $procdff$3884 ($dff) from module LL5k_WIP (D = $procmux$3489_Y, Q = \status_rx_stop_clamped, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$4131 ($sdff) from module LL5k_WIP (D = $procmux$3479_Y, Q = \status_rx_stop_clamped).
+Adding SRST signal on $procdff$3883 ($dff) from module LL5k_WIP (D = $procmux$3519_Y, Q = \status_rx_start_clamped, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$4139 ($sdff) from module LL5k_WIP (D = $procmux$3509_Y, Q = \status_rx_start_clamped).
+Adding SRST signal on $procdff$3882 ($dff) from module LL5k_WIP (D = $procmux$3548_Y, Q = \reg_test, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$4147 ($sdff) from module LL5k_WIP (D = \f_data, Q = \reg_test).
+Adding SRST signal on $procdff$3881 ($dff) from module LL5k_WIP (D = $procmux$3563_Y, Q = \reg_rx_window_stop_time, rval = 8'00000100).
+Adding EN signal on $auto$ff.cc:337:slice$4163 ($sdff) from module LL5k_WIP (D = $7$unnamed_block$1.new_rx_stop[7:0]$238, Q = \reg_rx_window_stop_time).
+Adding SRST signal on $procdff$3880 ($dff) from module LL5k_WIP (D = $procmux$3578_Y, Q = \reg_rx_window_start_time, rval = 8'00000011).
+Adding EN signal on $auto$ff.cc:337:slice$4179 ($sdff) from module LL5k_WIP (D = $7$unnamed_block$1.new_rx_start[7:0]$237, Q = \reg_rx_window_start_time).
+Adding SRST signal on $procdff$3879 ($dff) from module LL5k_WIP (D = $procmux$3599_Y, Q = \reg_pzt_clamp_stop_time, rval = 8'00000010).
+Adding EN signal on $auto$ff.cc:337:slice$4191 ($sdff) from module LL5k_WIP (D = \f_data, Q = \reg_pzt_clamp_stop_time).
+Adding SRST signal on $procdff$3878 ($dff) from module LL5k_WIP (D = $procmux$3617_Y, Q = \reg_pzt_clamp_start_time, rval = 8'00000001).
+Adding EN signal on $auto$ff.cc:337:slice$4201 ($sdff) from module LL5k_WIP (D = \f_data, Q = \reg_pzt_clamp_start_time).
+Adding EN signal on $procdff$3876 ($dff) from module LL5k_WIP (D = $procmux$3647_Y, Q = \tx_shift).
+Adding SRST signal on $auto$ff.cc:337:slice$4209 ($dffe) from module LL5k_WIP (D = $procmux$3644_Y, Q = \tx_shift, rval = 8'01010110).
+Adding EN signal on $procdff$3875 ($dff) from module LL5k_WIP (D = 3'000, Q = \tx_bit_cnt).
+Adding EN signal on $procdff$3874 ($dff) from module LL5k_WIP (D = 16'0000000000000000, Q = \tx_tick_cnt).
+Adding EN signal on $procdff$3873 ($dff) from module LL5k_WIP (D = 2'01, Q = \tx_state).
+Setting constant 1-bit at position 0 on $auto$ff.cc:337:slice$4219 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 1 on $auto$ff.cc:337:slice$4219 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 1 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 2 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 3 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 4 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 5 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 6 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 7 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 8 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 9 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 10 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 11 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 12 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 13 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 14 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 15 on $auto$ff.cc:337:slice$4216 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$4213 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 1 on $auto$ff.cc:337:slice$4213 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 2 on $auto$ff.cc:337:slice$4213 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 3 on $auto$ff.cc:337:slice$4089 ($sdffe) from module LL5k_WIP.
+Setting constant 0-bit at position 4 on $auto$ff.cc:337:slice$4089 ($sdffe) from module LL5k_WIP.
+Setting constant 0-bit at position 5 on $auto$ff.cc:337:slice$4089 ($sdffe) from module LL5k_WIP.
+Setting constant 0-bit at position 6 on $auto$ff.cc:337:slice$4089 ($sdffe) from module LL5k_WIP.
+Setting constant 0-bit at position 7 on $auto$ff.cc:337:slice$4089 ($sdffe) from module LL5k_WIP.
+Setting constant 0-bit at position 7 on $auto$ff.cc:337:slice$4055 ($sdffe) from module LL5k_WIP.
+
+2.12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+Warning: Driver-driver conflict for \tx_tick_cnt [15] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [14] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [13] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [12] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [11] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [10] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [9] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [8] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [7] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [6] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [5] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [4] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [3] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [2] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [1] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_tick_cnt [0] between cell $auto$ff.cc:337:slice$4063.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_state [1] between cell $auto$ff.cc:337:slice$4065.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_state [0] between cell $auto$ff.cc:337:slice$4065.Q and constant 1'1 in LL5k_WIP: Resolved using constant.
+Warning: Driver-driver conflict for \tx_shift [7] between cell $auto$ff.cc:337:slice$4212.Q and constant 1'0 in LL5k_WIP: Resolved using constant.
+Removed 139 unused cells and 144 unused wires.
+<suppressed ~140 debug messages>
+
+2.12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+<suppressed ~75 debug messages>
+
+2.12.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \LL5k_WIP..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1209.
+    dead port 2/2 on $mux $procmux$1209.
+    dead port 1/2 on $mux $procmux$1211.
+    dead port 2/2 on $mux $procmux$1211.
+    dead port 1/2 on $mux $procmux$1214.
+    dead port 2/2 on $mux $procmux$1214.
+    dead port 1/2 on $mux $procmux$1217.
+    dead port 2/2 on $mux $procmux$1217.
+    dead port 1/2 on $mux $procmux$1220.
+    dead port 2/2 on $mux $procmux$1220.
+    dead port 1/2 on $mux $procmux$1222.
+    dead port 2/2 on $mux $procmux$1222.
+    dead port 1/2 on $mux $procmux$1225.
+    dead port 2/2 on $mux $procmux$1225.
+    dead port 1/2 on $mux $procmux$1228.
+    dead port 2/2 on $mux $procmux$1228.
+    dead port 1/2 on $mux $procmux$1403.
+    dead port 2/2 on $mux $procmux$1403.
+    dead port 1/2 on $mux $procmux$1406.
+    dead port 2/2 on $mux $procmux$1406.
+    dead port 1/2 on $mux $procmux$1409.
+    dead port 2/2 on $mux $procmux$1409.
+    dead port 1/2 on $mux $procmux$1411.
+    dead port 2/2 on $mux $procmux$1411.
+    dead port 1/2 on $mux $procmux$1414.
+    dead port 2/2 on $mux $procmux$1414.
+    dead port 1/2 on $mux $procmux$1417.
+    dead port 2/2 on $mux $procmux$1417.
+    dead port 1/2 on $mux $procmux$1428.
+    dead port 2/2 on $mux $procmux$1428.
+    dead port 1/2 on $mux $procmux$1430.
+    dead port 2/2 on $mux $procmux$1430.
+    dead port 1/2 on $mux $procmux$1433.
+    dead port 2/2 on $mux $procmux$1433.
+    dead port 1/2 on $mux $procmux$1436.
+    dead port 2/2 on $mux $procmux$1436.
+    dead port 1/2 on $mux $procmux$1438.
+    dead port 2/2 on $mux $procmux$1438.
+    dead port 1/2 on $mux $procmux$1441.
+    dead port 2/2 on $mux $procmux$1441.
+    dead port 1/2 on $mux $procmux$1444.
+    dead port 2/2 on $mux $procmux$1444.
+    dead port 1/2 on $mux $procmux$1745.
+    dead port 2/2 on $mux $procmux$1745.
+    dead port 1/2 on $mux $procmux$1748.
+    dead port 2/2 on $mux $procmux$1748.
+    dead port 1/2 on $mux $procmux$1750.
+    dead port 2/2 on $mux $procmux$1750.
+    dead port 1/2 on $mux $procmux$1753.
+    dead port 2/2 on $mux $procmux$1753.
+    dead port 1/2 on $mux $procmux$1756.
+    dead port 2/2 on $mux $procmux$1756.
+    dead port 1/2 on $mux $procmux$1767.
+    dead port 2/2 on $mux $procmux$1767.
+    dead port 1/2 on $mux $procmux$1769.
+    dead port 2/2 on $mux $procmux$1769.
+    dead port 1/2 on $mux $procmux$1772.
+    dead port 2/2 on $mux $procmux$1772.
+    dead port 1/2 on $mux $procmux$1774.
+    dead port 2/2 on $mux $procmux$1774.
+    dead port 1/2 on $mux $procmux$1777.
+    dead port 2/2 on $mux $procmux$1777.
+    dead port 1/2 on $mux $procmux$1780.
+    dead port 2/2 on $mux $procmux$1780.
+    dead port 1/2 on $mux $procmux$3315.
+    dead port 2/2 on $mux $procmux$3315.
+    dead port 1/2 on $mux $procmux$3318.
+    dead port 2/2 on $mux $procmux$3318.
+    dead port 1/2 on $mux $procmux$3321.
+    dead port 2/2 on $mux $procmux$3321.
+    dead port 1/2 on $mux $procmux$3324.
+    dead port 2/2 on $mux $procmux$3324.
+    dead port 1/2 on $mux $procmux$3336.
+    dead port 2/2 on $mux $procmux$3336.
+    dead port 1/2 on $mux $procmux$3339.
+    dead port 2/2 on $mux $procmux$3339.
+    dead port 1/2 on $mux $procmux$3342.
+    dead port 2/2 on $mux $procmux$3342.
+    dead port 1/2 on $mux $procmux$3345.
+    dead port 2/2 on $mux $procmux$3345.
+    dead port 1/4 on $pmux $procmux$3696.
+    dead port 2/4 on $pmux $procmux$3696.
+    dead port 4/4 on $pmux $procmux$3696.
+Removed 83 multiplexer ports.
+<suppressed ~54 debug messages>
+
+2.12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \LL5k_WIP.
+Performed a total of 0 changes.
+
+2.12.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+<suppressed ~69 debug messages>
+Removed a total of 23 cells.
+
+2.12.13. Executing OPT_DFF pass (perform DFF optimizations).
+Handling never-active EN on $auto$ff.cc:337:slice$4087 ($sdffe) from module LL5k_WIP (connecting SRST instead).
+Handling never-active EN on $auto$ff.cc:337:slice$4085 ($sdffe) from module LL5k_WIP (connecting SRST instead).
+Handling never-active EN on $auto$ff.cc:337:slice$4081 ($sdffe) from module LL5k_WIP (connecting SRST instead).
+Handling never-active EN on $auto$ff.cc:337:slice$4192 ($sdffe) from module LL5k_WIP (connecting SRST instead).
+Handling never-active EN on $auto$ff.cc:337:slice$4164 ($sdffe) from module LL5k_WIP (connecting SRST instead).
+Handling never-active EN on $auto$ff.cc:337:slice$4148 ($sdffe) from module LL5k_WIP (connecting SRST instead).
+Handling never-active EN on $auto$ff.cc:337:slice$4140 ($sdffe) from module LL5k_WIP (connecting SRST instead).
+Handling never-active EN on $auto$ff.cc:337:slice$4223 ($sdffe) from module LL5k_WIP (connecting SRST instead).
+Handling never-active EN on $auto$ff.cc:337:slice$4222 ($sdffe) from module LL5k_WIP (connecting SRST instead).
+Handling never-active EN on $auto$ff.cc:337:slice$4212 ($sdffce) from module LL5k_WIP (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$4202 ($sdffe) from module LL5k_WIP (connecting SRST instead).
+Handling never-active EN on $auto$ff.cc:337:slice$4132 ($sdffe) from module LL5k_WIP (connecting SRST instead).
+Handling never-active EN on $auto$ff.cc:337:slice$4180 ($sdffe) from module LL5k_WIP (connecting SRST instead).
+Setting constant 1-bit at position 0 on $auto$ff.cc:337:slice$4180 ($dffe) from module LL5k_WIP.
+Setting constant 1-bit at position 1 on $auto$ff.cc:337:slice$4180 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 2 on $auto$ff.cc:337:slice$4180 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 3 on $auto$ff.cc:337:slice$4180 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 4 on $auto$ff.cc:337:slice$4180 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 5 on $auto$ff.cc:337:slice$4180 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 6 on $auto$ff.cc:337:slice$4180 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 7 on $auto$ff.cc:337:slice$4180 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$4132 ($dffe) from module LL5k_WIP.
+Setting constant 1-bit at position 0 on $auto$ff.cc:337:slice$4202 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 1 on $auto$ff.cc:337:slice$4202 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 2 on $auto$ff.cc:337:slice$4202 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 3 on $auto$ff.cc:337:slice$4202 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 4 on $auto$ff.cc:337:slice$4202 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 5 on $auto$ff.cc:337:slice$4202 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 6 on $auto$ff.cc:337:slice$4202 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 7 on $auto$ff.cc:337:slice$4202 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$4222 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 1 on $auto$ff.cc:337:slice$4222 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 2 on $auto$ff.cc:337:slice$4222 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$4223 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 1 on $auto$ff.cc:337:slice$4223 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 2 on $auto$ff.cc:337:slice$4223 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 3 on $auto$ff.cc:337:slice$4223 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 4 on $auto$ff.cc:337:slice$4223 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 5 on $auto$ff.cc:337:slice$4223 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 6 on $auto$ff.cc:337:slice$4223 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$4140 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$4148 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 1 on $auto$ff.cc:337:slice$4148 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 2 on $auto$ff.cc:337:slice$4148 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 3 on $auto$ff.cc:337:slice$4148 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 4 on $auto$ff.cc:337:slice$4148 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 5 on $auto$ff.cc:337:slice$4148 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 6 on $auto$ff.cc:337:slice$4148 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 7 on $auto$ff.cc:337:slice$4148 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$4164 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 1 on $auto$ff.cc:337:slice$4164 ($dffe) from module LL5k_WIP.
+Setting constant 1-bit at position 2 on $auto$ff.cc:337:slice$4164 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 3 on $auto$ff.cc:337:slice$4164 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 4 on $auto$ff.cc:337:slice$4164 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 5 on $auto$ff.cc:337:slice$4164 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 6 on $auto$ff.cc:337:slice$4164 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 7 on $auto$ff.cc:337:slice$4164 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$4192 ($dffe) from module LL5k_WIP.
+Setting constant 1-bit at position 1 on $auto$ff.cc:337:slice$4192 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 2 on $auto$ff.cc:337:slice$4192 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 3 on $auto$ff.cc:337:slice$4192 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 4 on $auto$ff.cc:337:slice$4192 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 5 on $auto$ff.cc:337:slice$4192 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 6 on $auto$ff.cc:337:slice$4192 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 7 on $auto$ff.cc:337:slice$4192 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$4081 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 1 on $auto$ff.cc:337:slice$4081 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 2 on $auto$ff.cc:337:slice$4081 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$4085 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 1 on $auto$ff.cc:337:slice$4085 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 2 on $auto$ff.cc:337:slice$4085 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 3 on $auto$ff.cc:337:slice$4085 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 4 on $auto$ff.cc:337:slice$4085 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 5 on $auto$ff.cc:337:slice$4085 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 6 on $auto$ff.cc:337:slice$4085 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 7 on $auto$ff.cc:337:slice$4085 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$4087 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 1 on $auto$ff.cc:337:slice$4087 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 2 on $auto$ff.cc:337:slice$4087 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 3 on $auto$ff.cc:337:slice$4087 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 4 on $auto$ff.cc:337:slice$4087 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 5 on $auto$ff.cc:337:slice$4087 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 6 on $auto$ff.cc:337:slice$4087 ($dffe) from module LL5k_WIP.
+Setting constant 0-bit at position 7 on $auto$ff.cc:337:slice$4087 ($dffe) from module LL5k_WIP.
+
+2.12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+Removed 143 unused cells and 274 unused wires.
+<suppressed ~157 debug messages>
+
+2.12.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.12.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.12.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \LL5k_WIP..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+2.12.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \LL5k_WIP.
+Performed a total of 0 changes.
+
+2.12.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.12.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.12.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.12.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.12.23. Finished fast OPT passes. (There is nothing left to do.)
+
+2.13. Executing WREDUCE pass (reducing word size of cells).
+Removed top 18 bits (of 32) from port B of cell LL5k_WIP.$ge$LL5k_7R.v:78$20 ($ge).
+Removed top 31 bits (of 32) from port B of cell LL5k_WIP.$add$LL5k_7R.v:85$21 ($add).
+
+2.14. Executing PEEPOPT pass (run peephole optimizers).
+
+2.15. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.16. Executing SHARE pass (SAT-based resource sharing).
+
+2.17. Executing TECHMAP pass (map to technology primitives).
+
+2.17.1. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/cmp2lut.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/cmp2lut.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/cmp2lut.v
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+2.17.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~36 debug messages>
+
+2.18. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.19. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.20. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module LL5k_WIP:
+  creating $macc model for $add$LL5k_7R.v:85$21 ($add).
+  creating $alu model for $macc $add$LL5k_7R.v:85$21.
+  creating $alu model for $ge$LL5k_7R.v:78$20 ($ge): new $alu
+  creating $alu cell for $ge$LL5k_7R.v:78$20: $auto$alumacc.cc:512:replace_alu$4226
+  creating $alu cell for $add$LL5k_7R.v:85$21: $auto$alumacc.cc:512:replace_alu$4239
+  created 2 $alu and 0 $macc cells.
+
+2.21. Executing OPT pass (performing simple optimizations).
+
+2.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.21.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \LL5k_WIP..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+2.21.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \LL5k_WIP.
+Performed a total of 0 changes.
+
+2.21.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.21.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.21.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.21.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.21.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \LL5k_WIP..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+2.21.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \LL5k_WIP.
+Performed a total of 0 changes.
+
+2.21.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.21.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.21.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.21.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.22. Executing MEMORY pass.
+
+2.22.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.22.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.22.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.22.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.22.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.22.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.22.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.22.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.22.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.22.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.23. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.24. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+
+2.25. Executing TECHMAP pass (map to technology primitives).
+
+2.25.1. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/brams_map.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/brams_map.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/brams_map.v
+Generating RTLIL representation for module `\$__ICE40_RAM4K_'.
+Successfully finished Verilog frontend.
+
+2.25.2. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/spram_map.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/spram_map.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/spram_map.v
+Generating RTLIL representation for module `\$__ICE40_SPRAM_'.
+Successfully finished Verilog frontend.
+
+2.25.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+2.26. Executing ICE40_BRAMINIT pass.
+
+2.27. Executing OPT pass (performing simple optimizations).
+
+2.27.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+<suppressed ~1 debug messages>
+
+2.27.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.27.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.27.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.27.5. Finished fast OPT passes.
+
+2.28. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.29. Executing OPT pass (performing simple optimizations).
+
+2.29.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.29.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.29.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \LL5k_WIP..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.29.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \LL5k_WIP.
+Performed a total of 0 changes.
+
+2.29.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.29.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.29.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.29.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.29.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.30. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+2.31. Executing TECHMAP pass (map to technology primitives).
+
+2.31.1. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/techmap.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/techmap.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/techmap.v
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `\$connect'.
+Generating RTLIL representation for module `\$input_port'.
+Successfully finished Verilog frontend.
+
+2.31.2. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/arith_map.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/arith_map.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/arith_map.v
+Generating RTLIL representation for module `\_80_ice40_alu'.
+Successfully finished Verilog frontend.
+
+2.31.3. Continuing TECHMAP pass.
+Using template $paramod$6a42b6fefed750f8a1c58eab59479d960557103c\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$528cd5dff994f6eb853c84693a2c4cf71e524df4\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $xor.
+No more expansions possible.
+<suppressed ~138 debug messages>
+
+2.32. Executing OPT pass (performing simple optimizations).
+
+2.32.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+<suppressed ~160 debug messages>
+
+2.32.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+<suppressed ~66 debug messages>
+Removed a total of 22 cells.
+
+2.32.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.32.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+Removed 11 unused cells and 56 unused wires.
+<suppressed ~12 debug messages>
+
+2.32.5. Finished fast OPT passes.
+
+2.33. Executing ICE40_OPT pass (performing simple optimizations).
+
+2.33.1. Running ICE40 specific optimizations.
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) LL5k_WIP.$auto$alumacc.cc:512:replace_alu$4226.slice[0].carry: CO=\por_cnt [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) LL5k_WIP.$auto$alumacc.cc:512:replace_alu$4239.slice[0].carry: CO=\por_cnt [0]
+
+2.33.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.33.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.33.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.33.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+Removed 1 unused cells and 0 unused wires.
+<suppressed ~1 debug messages>
+
+2.33.6. Rerunning OPT passes. (Removed registers in this run.)
+
+2.33.7. Running ICE40 specific optimizations.
+
+2.33.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.33.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.33.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.33.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.33.12. Finished OPT passes. (There is nothing left to do.)
+
+2.34. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+2.35. Executing TECHMAP pass (map to technology primitives).
+
+2.35.1. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/ff_map.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/ff_map.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/ff_map.v
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+2.35.2. Continuing TECHMAP pass.
+Using template \$_SDFF_PP1_ for cells of type $_SDFF_PP1_.
+Using template \$_DFFE_PP_ for cells of type $_DFFE_PP_.
+No more expansions possible.
+<suppressed ~56 debug messages>
+
+2.36. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.37. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+Mapping LL5k_WIP.$auto$alumacc.cc:512:replace_alu$4239.slice[0].carry ($lut).
+
+2.38. Executing ICE40_OPT pass (performing simple optimizations).
+
+2.38.1. Running ICE40 specific optimizations.
+
+2.38.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+<suppressed ~14 debug messages>
+
+2.38.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.38.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.38.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+Removed 0 unused cells and 175 unused wires.
+<suppressed ~1 debug messages>
+
+2.38.6. Rerunning OPT passes. (Removed registers in this run.)
+
+2.38.7. Running ICE40 specific optimizations.
+
+2.38.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.38.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.38.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.38.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.38.12. Finished OPT passes. (There is nothing left to do.)
+
+2.39. Executing TECHMAP pass (map to technology primitives).
+
+2.39.1. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/latches_map.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/latches_map.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/latches_map.v
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+2.39.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+2.40. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/abc9_model.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/abc9_model.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/abc9_model.v
+Generating RTLIL representation for module `$__ICE40_CARRY_WRAPPER'.
+Successfully finished Verilog frontend.
+
+2.41. Executing ABC9 pass.
+
+2.41.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.41.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.41.3. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module LL5k_WIP.
+Found 0 SCCs.
+
+2.41.4. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.41.5. Executing TECHMAP pass (map to technology primitives).
+
+2.41.5.1. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/techmap.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/techmap.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/techmap.v
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `\$connect'.
+Generating RTLIL representation for module `\$input_port'.
+Successfully finished Verilog frontend.
+
+2.41.5.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~130 debug messages>
+
+2.41.6. Executing OPT pass (performing simple optimizations).
+
+2.41.6.1. Executing OPT_EXPR pass (perform const folding).
+
+2.41.6.2. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+2.41.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Removed 0 multiplexer ports.
+
+2.41.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Performed a total of 0 changes.
+
+2.41.6.5. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+2.41.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.41.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+
+2.41.6.8. Executing OPT_EXPR pass (perform const folding).
+
+2.41.6.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.41.7. Executing TECHMAP pass (map to technology primitives).
+
+2.41.7.1. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/abc9_map.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/abc9_map.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/abc9_map.v
+Successfully finished Verilog frontend.
+
+2.41.7.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~2 debug messages>
+
+2.41.8. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/abc9_model.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/abc9_model.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/abc9_model.v
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+2.41.9. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~38 debug messages>
+
+2.41.10. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.41.11. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+2.41.12. Executing TECHMAP pass (map to technology primitives).
+
+2.41.12.1. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/techmap.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/techmap.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/techmap.v
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `\$connect'.
+Generating RTLIL representation for module `\$input_port'.
+Successfully finished Verilog frontend.
+
+2.41.12.2. Continuing TECHMAP pass.
+Using template $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 for cells of type $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1.
+Using template SB_CARRY for cells of type SB_CARRY.
+Using template $paramod\SB_LUT4\LUT_INIT=16'0110100110010110 for cells of type SB_LUT4.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $logic_and.
+No more expansions possible.
+<suppressed ~151 debug messages>
+
+2.41.13. Executing OPT pass (performing simple optimizations).
+
+2.41.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+<suppressed ~4 debug messages>
+
+2.41.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+<suppressed ~29 debug messages>
+Removed a total of 12 cells.
+
+2.41.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \LL5k_WIP..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.41.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \LL5k_WIP.
+Performed a total of 0 changes.
+
+2.41.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.41.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.41.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+Removed 0 unused cells and 24 unused wires.
+<suppressed ~1 debug messages>
+
+2.41.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.41.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.41.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \LL5k_WIP..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.41.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \LL5k_WIP.
+Performed a total of 0 changes.
+
+2.41.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\LL5k_WIP'.
+Removed a total of 0 cells.
+
+2.41.13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.41.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \LL5k_WIP..
+
+2.41.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LL5k_WIP.
+
+2.41.13.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.41.14. Executing AIGMAP pass (map logic to AIG).
+Module LL5k_WIP: replaced 7 cells with 43 new cells, skipped 11 cells.
+  replaced 2 cell types:
+       5 $_MUX_
+       2 $_OR_
+  not replaced 3 cell types:
+       2 $_AND_
+       1 $_NOT_
+       8 $specify2
+
+2.41.15. Executing AIGMAP pass (map logic to AIG).
+Module LL5k_WIP: replaced 2 cells with 8 new cells, skipped 190 cells.
+  replaced 1 cell types:
+       2 $_OR_
+  not replaced 7 cell types:
+      32 $_AND_
+      26 $_NOT_
+      32 SB_DFFE
+       2 SB_DFFSS
+      34 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000000000010101
+      62 $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1
+       2 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000000011001011
+
+2.41.15.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.41.15.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.41.15.3. Executing XAIGER backend.
+<suppressed ~45 debug messages>
+Extracted 34 AND gates and 265 wires from module `LL5k_WIP' to a netlist network with 36 inputs and 38 outputs.
+
+2.41.15.4. Executing ABC9_EXE pass (technology mapping using ABC9).
+
+2.41.15.5. Executing ABC9.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: 
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_lut <abc-temp-dir>/input.lut 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =     36/     38  and =      34  lev =    8 (   0.04)  mem = 0.01 MB  box = 98  bb = 36
+ABC: + &scorr 
+ABC: Warning: The network is combinational.
+ABC: + &sweep 
+ABC: + &dc2 
+ABC: + &dch -f -r 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =     36/     38  and =       1  lev =    1 (   0.00)  mem = 0.01 MB  ch =    0  box = 98  bb = 36
+ABC: cst =       0  cls =      0  lit =       0  unused =     197  proof =     0
+ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 1 carries.
+ABC: + &if -W 250 -v 
+ABC: K = 4. Memory (bytes): Truth =    0. Cut =   52. Obj =  136. Set =  564. CutMin = no
+ABC: Node =       1.  Ch =     0.  Total mem =    0.08 MB. Peak cut mem =    0.00 MB.
+ABC: P:  Del = 5145.00.  Ar =       1.0.  Edge =        2.  Cut =        1.  T =     0.00 sec
+ABC: P:  Del = 5145.00.  Ar =       1.0.  Edge =        2.  Cut =        1.  T =     0.00 sec
+ABC: P:  Del = 5145.00.  Ar =       1.0.  Edge =        2.  Cut =        1.  T =     0.00 sec
+ABC: F:  Del = 5145.00.  Ar =       1.0.  Edge =        2.  Cut =        1.  T =     0.00 sec
+ABC: A:  Del = 5145.00.  Ar =       1.0.  Edge =        2.  Cut =        1.  T =     0.00 sec
+ABC: A:  Del = 5145.00.  Ar =       1.0.  Edge =        2.  Cut =        1.  T =     0.00 sec
+ABC: Total time =     0.00 sec
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &mfs 
+ABC: The network is not changed by "&mfs".
+ABC: + &ps -l 
+ABC: <abc-temp-dir>/input : i/o =     36/     38  and =       1  lev =    1 (   0.00)  mem = 0.01 MB  box = 98  bb = 36
+ABC: Mapping (K=2)  :  lut =      1  edge =       2  lev =    1 (0.00)  levB =   32  mem = 0.00 MB
+ABC: LUT = 1 : 2=1 100.0 %  Ave = 2.00
+ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 1 carries.
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + time 
+ABC: elapse: 0.06 seconds, total: 0.06 seconds
+
+2.41.15.6. Executing AIGER frontend.
+<suppressed ~160 debug messages>
+Removed 1 unused cells and 582 unused wires.
+
+2.41.15.7. Executing ABC9_OPS pass (helper functions for ABC9).
+ABC RESULTS:              $lut cells:        3
+ABC RESULTS:   $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 cells:       62
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:       38
+Removing temp directory.
+
+2.41.16. Executing TECHMAP pass (map to technology primitives).
+
+2.41.16.1. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/abc9_unmap.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/abc9_unmap.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/abc9_unmap.v
+Generating RTLIL representation for module `\$__DFF_x__$abc9_flop'.
+Generating RTLIL representation for module `\$__ABC9_SCC_BREAKER'.
+Successfully finished Verilog frontend.
+
+2.41.16.2. Continuing TECHMAP pass.
+Using template $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 for cells of type $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1.
+No more expansions possible.
+<suppressed ~68 debug messages>
+
+2.42. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+2.43. Executing TECHMAP pass (map to technology primitives).
+
+2.43.1. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/ff_map.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/ff_map.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/ff_map.v
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+2.43.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~22 debug messages>
+Removed 32 unused cells and 604 unused wires.
+
+2.44. Executing OPT_LUT pass (optimize LUTs).
+Discovering LUTs.
+Number of LUTs:       34
+  1-LUT                2
+  2-LUT                2
+  3-LUT               30
+  with \SB_CARRY    (#0)   30
+  with \SB_CARRY    (#1)   30
+
+Eliminating LUTs.
+Number of LUTs:       34
+  1-LUT                2
+  2-LUT                2
+  3-LUT               30
+  with \SB_CARRY    (#0)   30
+  with \SB_CARRY    (#1)   30
+
+Combining LUTs.
+Number of LUTs:       34
+  1-LUT                2
+  2-LUT                2
+  3-LUT               30
+  with \SB_CARRY    (#0)   30
+  with \SB_CARRY    (#1)   30
+
+Eliminated 0 LUTs.
+Combined 0 LUTs.
+<suppressed ~130 debug messages>
+
+2.45. Executing TECHMAP pass (map to technology primitives).
+
+2.45.1. Executing Verilog-2005 frontend: C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/cells_map.v
+Parsing Verilog input from `C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/cells_map.v' to AST representation.
+verilog frontend filename C:\Tools\OSS-CA~1\bin\../share/yosys/ice40/cells_map.v
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+2.45.2. Continuing TECHMAP pass.
+Using template $paramod$fd904e9e35cfd343a9df248824bd3f1408724879\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
+No more expansions possible.
+<suppressed ~76 debug messages>
+Removed 0 unused cells and 68 unused wires.
+
+2.46. Executing AUTONAME pass.
+Renamed 224 objects in module LL5k_WIP (73 iterations).
+<suppressed ~224 debug messages>
+
+2.47. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `LL5k_WIP'. Setting top module to LL5k_WIP.
+
+2.47.1. Analyzing design hierarchy..
+Top module:  \LL5k_WIP
+
+2.47.2. Analyzing design hierarchy..
+Top module:  \LL5k_WIP
+Removed 0 unused modules.
+
+2.48. Printing statistics.
+
+=== LL5k_WIP ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      117 wires
+      245 wire bits
+      117 public wires
+      245 public wire bits
+        3 ports
+        3 port bits
+      129 submodules
+       61   SB_CARRY
+       32   SB_DFFE
+        2   SB_DFFSS
+       34   SB_LUT4
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+        - LL5k_WIP
+
+        +----------Count including submodules.
+        | 
+      117 wires
+      245 wire bits
+      117 public wires
+      245 public wire bits
+        3 ports
+        3 port bits
+        - memories
+        - memory bits
+        - processes
+        - cells
+      129 submodules
+       61   SB_CARRY
+       32   SB_DFFE
+        2   SB_DFFSS
+       34   SB_LUT4
+
+2.49. Executing CHECK pass (checking for obvious problems).
+Checking module LL5k_WIP...
+Found and reported 0 problems.
+
+2.50. Executing JSON backend.
+
+Warnings: 48 unique messages, 48 total
+End of script. Logfile hash: f7b4cf578c
+Yosys 0.60+51 (git sha1 64a933d77-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)
+Time spent: 1% 28x opt_expr (0 sec), 1% 25x opt_clean (0 sec), ...

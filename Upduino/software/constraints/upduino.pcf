@@ -1,0 +1,27 @@
+# UPduino constraints
+# Device: iCE40UP5K-SG48
+#
+# Clock:
+#   - 12 MHz on-board oscillator
+#   - Routed to package pin 44 (OSC jumper fitted)
+#
+# UART:
+#   - uart_rx : package pin 24 (FTDI TX -> FPGA RX)
+#   - uart_tx : package pin 25 (FPGA TX -> FTDI RX)
+#
+# Reset:
+#   - rst is tied LOW (inactive) for now
+#   - Internal reset handling is done in RTL
+
+# IOB_25B-G3 Pin 8 on J3 connector or pin 41 when treated as one contiguous 48-pin device.
+# Closed with a solder bridge on SJ16 to input 12MHz to FPGA
+set_io clk      20
+
+# IOT_41A, Pin 24 on J2 connector
+set_io uart_rx  41
+
+# IOB_6A, Pin 24 on J2 connector or pin 25 when treated as one contiguous 48-pin device.
+set_io uart_tx   6
+
+# rst is not pinned; it will be held low internally
+
