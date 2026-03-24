@@ -1,0 +1,32 @@
+# =========================
+# KiCad
+# =========================
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*-backups/
+*.autosave
+*.tmp
+
+# KiCad fabrication outputs (keep these out of repo)
+exports/
+*.gbr
+*.drl
+*.zip
+
+# =========================
+# LTspice
+# =========================
+*.raw
+*.log
+*.net
+*.op.raw
+
+# =========================
+# General
+# =========================
+*.bak
+*.tmp
+*.cache
+.DS_Store
+Thumbs.db
