@@ -1,0 +1,23 @@
+###############################################################################
+# SmartSwitch — minimal repo contents
+# Goal: ONLY commit these files:
+#   - SmartSwitch.kicad_pro
+#   - SmartSwitch.kicad_sch
+#   - SmartSwitch.kicad_pcb
+#   - .gitignore
+###############################################################################
+
+# Ignore everything by default
+*
+
+# Keep this ignore file
+!.gitignore
+
+# Keep the KiCad project sources (root-level)
+!SmartSwitch.kicad_pro
+!SmartSwitch.kicad_sch
+!SmartSwitch.kicad_pcb
+
+# Explicitly ignore KiCad local preferences (per-machine UI state)
+SmartSwitch.kicad_prl
+*.kicad_prl
