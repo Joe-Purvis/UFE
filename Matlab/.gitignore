@@ -1,0 +1,16 @@
+# MATLAB autosave / temp
+*.asv
+*.m~
+*.autosave
+*.tmp
+
+# Simulink / MATLAB generated
+slprj/
+*.slxc
+*.slxc.cache
+*.mex*
+*.pcode
+
+# OS
+.DS_Store
+Thumbs.db
