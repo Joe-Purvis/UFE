@@ -1,0 +1,51 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# MATLAB
+*.asv
+*.mlx.autosave
+slprj/
+simulinkcache/
+codegen/
+*.slxc
+
+# KiCad
+*-backups/
+_fp-info-cache
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+
+# LTspice
+*.raw
+*.op.raw
+*.net
+*.log
+*.fft
+*.tmp
+
+# FPGA / build outputs
+*.bin
+*.bit
+*.asc
+*.json
+*.rpt
+*.map
+*.pnr
+*.svf
+
+# General build folders
+build/
+dist/
+out/
+
+# Git / local noise
+ChatGPT_Logs/
