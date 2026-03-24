@@ -41,6 +41,7 @@ __pycache__/
 # --- KiCad runtime junk ---
 *_autosave-*.kicad_sch
 *~.lck
+*.lck
 fp-info-cache
 
 
